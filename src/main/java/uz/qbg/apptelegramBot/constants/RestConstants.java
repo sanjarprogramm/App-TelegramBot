@@ -1,4 +1,4 @@
-package uz.qbg.apptelegramBot;
+package uz.qbg.apptelegramBot.constants;
 
 public interface RestConstants {
 
@@ -10,5 +10,6 @@ public interface RestConstants {
 
     String MY_URL = " https://ff3f-84-54-74-20.in.ngrok.io";
 
+    String BASE_PACKAGE = "uz.qbg.apptelegramBot";
 
 }

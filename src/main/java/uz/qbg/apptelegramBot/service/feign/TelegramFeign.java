@@ -1,16 +1,16 @@
-package uz.qbg.apptelegramBot.feign;
+package uz.qbg.apptelegramBot.service.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import uz.qbg.apptelegramBot.RestConstants;
+import uz.qbg.apptelegramBot.constants.RestConstants;
 import uz.qbg.apptelegramBot.payload.ResultTelegram;
 import uz.qbg.apptelegramBot.payload.SendPhotoOwn;
 
 @FeignClient(url = RestConstants.TELEGRAM_BASE_URL_WITHOUT_BOT,
-        name = "KelegramFeign")
+        name = "telegram_client")
 public interface TelegramFeign {
     @PostMapping(value = "{path}/sendMessage")
     ResultTelegram sendMessageToUser(@PathVariable String path,

@@ -1,4 +1,4 @@
-package uz.qbg.apptelegramBot.controller;
+package uz.qbg.apptelegramBot.controllers;
 
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;

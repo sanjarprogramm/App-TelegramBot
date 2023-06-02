@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import uz.qbg.apptelegramBot.RestConstants;
+import uz.qbg.apptelegramBot.constants.RestConstants;
 import uz.qbg.apptelegramBot.payload.ResultTelegram;
 
 

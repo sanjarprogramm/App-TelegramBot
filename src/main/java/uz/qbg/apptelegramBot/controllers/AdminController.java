@@ -1,19 +1,18 @@
-package uz.qbg.apptelegramBot;
+package uz.qbg.apptelegramBot.controllers;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.PhotoSize;
-import uz.qbg.apptelegramBot.feign.TelegramFeign;
+import uz.qbg.apptelegramBot.constants.RestConstants;
+
 import uz.qbg.apptelegramBot.payload.ResultTelegram;
 import uz.qbg.apptelegramBot.payload.SendPhotoOwn;
+import uz.qbg.apptelegramBot.service.feign.TelegramFeign;
 
 import java.util.*;
 
@@ -52,7 +51,7 @@ public class AdminController {
 
             try {
 
-                        fileName=fileId==null? RestConstants.MY_URL + "/api/attachment?name=" + fileName:fileId;
+                fileName = fileId == null ? RestConstants.MY_URL + "/api/attachment?name=" + fileName : fileId;
 
 
                 SendPhotoOwn sendPhotoOwn = new SendPhotoOwn

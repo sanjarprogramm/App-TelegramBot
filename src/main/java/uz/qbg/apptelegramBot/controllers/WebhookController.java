@@ -1,4 +1,4 @@
-package uz.qbg.apptelegramBot.controller;
+package uz.qbg.apptelegramBot.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +12,10 @@ import uz.qbg.apptelegramBot.service.TgService;
 @RequestMapping(value = "/api/telegram")
 @RequiredArgsConstructor
 public class WebhookController {
+
+
   private final TgService tgService;
+
     String token = "5848876170:AAH96VKXw4_Nl67qNn1ZjqX2g6D7ZZncUrE";
 
 
